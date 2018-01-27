@@ -1,0 +1,69 @@
+{
+    "name": "personal-website",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "test": "jest --coverage",
+        "test:watch": "jest --watchAll --coverage",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
+        "verify": "npm run lint && npm run test"
+    },
+    "private": true,
+    "jest": {
+        "preset": "jest-preset-angular",
+        "setupTestFrameworkScriptFile": "<rootDir>/src/setupJest.ts",
+        "coverageThreshold": {
+            "global": {
+                "branches": 80,
+                "functions": 80,
+                "lines": 80,
+                "statements": -10
+            }
+        },
+        "coveragePathIgnorePatterns": [
+            "<rootDir>/build/",
+            "<rootDir>/node_modules/",
+            "<rootDir>/src/setupJest.ts"
+        ],
+        "coverageFormats": [
+            "json",
+            "html"
+        ]
+    },
+    "dependencies": {
+        "@angular/animations": "^5.0.0-rc.1",
+        "@angular/common": "^5.0.0-rc.1",
+        "@angular/compiler": "^5.0.0-rc.1",
+        "@angular/core": "^5.0.0-rc.1",
+        "@angular/forms": "^5.0.0-rc.1",
+        "@angular/http": "^5.0.0-rc.1",
+        "@angular/platform-browser": "^5.0.0-rc.1",
+        "@angular/platform-browser-dynamic": "^5.0.0-rc.1",
+        "@angular/router": "^5.0.0-rc.1",
+        "bootstrap": "^4.0.0-beta.3",
+        "core-js": "^2.4.1",
+        "rxjs": "^5.5.2",
+        "zone.js": "^0.8.14"
+    },
+    "devDependencies": {
+        "@angular-devkit/core": "0.0.29",
+        "@angular/cli": "1.6.6",
+        "@angular/compiler-cli": "^5.0.0-rc.1",
+        "@angular/language-service": "^5.0.0-rc.1",
+        "@types/jest": "^22.1.0",
+        "@types/node": "~6.0.60",
+        "codelyzer": "^4.0.1",
+        "jasmine-core": "~2.6.2",
+        "jasmine-spec-reporter": "~4.1.0",
+        "jest": "^22.1.4",
+        "jest-preset-angular": "^5.0.0",
+        "protractor": "~5.1.2",
+        "ts-node": "~3.2.0",
+        "tslint": "~5.7.0",
+        "typescript": "~2.4.2"
+    }
+}
