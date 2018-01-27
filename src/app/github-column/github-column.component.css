@@ -1,0 +1,11 @@
+.github-column {
+    background: #004977;
+    width: 30%;
+    position: absolute;
+    left: 70%;
+}
+.github-card {
+    width: 100%;
+    height: 200px;
+    background: white;
+}

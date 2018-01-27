@@ -48,7 +48,9 @@
         "bootstrap": "^4.0.0-beta.3",
         "core-js": "^2.4.1",
         "git-card": "^1.0.5",
+        "node-sass": "^4.7.2",
         "rxjs": "^5.5.2",
+        "sass-loader": "^6.0.6",
         "zone.js": "^0.8.14"
     },
     "devDependencies": {

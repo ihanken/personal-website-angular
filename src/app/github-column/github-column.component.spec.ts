@@ -1,12 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GithubCardComponent } from './github-card.component';
+import { GithubColumnComponent } from './github-column.component';
 
-describe('GithubCardComponent', () => {
-    let component: GithubCardComponent;
+describe('GithubColumnComponent', () => {
+    let component: GithubColumnComponent;
 
     beforeEach(() => {
-        component = new GithubCardComponent();
+        component = new GithubColumnComponent();
     });
 
     it('should create', () => {
