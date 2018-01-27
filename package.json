@@ -10,6 +10,11 @@
         "test:watch": "jest --watchAll --coverage",
         "lint": "ng lint",
         "e2e": "ng e2e",
+        "docker:remove": "docker kill personal-website",
+        "docker:build": "docker build -t personal-website .",
+        "docker:run": "docker run -d -p 8080:80 --rm --name personal-website personal-website",
+        "docker:logs": "docker logs -f personal-website",
+        "docker:remove:build:run:logs": "npm run docker:remove && npm run docker:build && npm run docker:run && npm run docker:logs",
         "verify": "npm run lint && npm run test"
     },
     "private": true,
@@ -46,6 +51,7 @@
         "@angular/router": "^5.0.0-rc.1",
         "bootstrap": "^4.0.0-beta.3",
         "core-js": "^2.4.1",
+        "git-card": "^1.0.5",
         "rxjs": "^5.5.2",
         "zone.js": "^0.8.14"
     },
