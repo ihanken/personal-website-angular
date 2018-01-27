@@ -33,10 +33,6 @@
             "<rootDir>/build/",
             "<rootDir>/node_modules/",
             "<rootDir>/src/setupJest.ts"
-        ],
-        "coverageFormats": [
-            "json",
-            "html"
         ]
     },
     "dependencies": {
