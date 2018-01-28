@@ -32,9 +32,9 @@ describe('GithubColumnComponent', () => {
             mockRepoOne.forks = 1;
             mockRepoTwo.forks = 1;
             mockRepoThree.forks = 1;
-            mockRepoOne.name = "a";
-            mockRepoTwo.name = "a";
-            mockRepoThree.name = "a";
+            mockRepoOne.name = 'a';
+            mockRepoTwo.name = 'a';
+            mockRepoThree.name = 'a';
 
             const mockRepoData = [ mockRepoOne, mockRepoThree, mockRepoTwo ];
 
@@ -53,9 +53,9 @@ describe('GithubColumnComponent', () => {
             mockRepoOne.forks = 1;
             mockRepoTwo.forks = 2;
             mockRepoThree.forks = 3;
-            mockRepoOne.name = "a";
-            mockRepoTwo.name = "a";
-            mockRepoThree.name = "a";
+            mockRepoOne.name = 'a';
+            mockRepoTwo.name = 'a';
+            mockRepoThree.name = 'a';
 
             const mockRepoData = [ mockRepoOne, mockRepoThree, mockRepoTwo ];
 
@@ -74,9 +74,9 @@ describe('GithubColumnComponent', () => {
             mockRepoOne.forks = 1;
             mockRepoTwo.forks = 1;
             mockRepoThree.forks = 1;
-            mockRepoOne.name = "a";
-            mockRepoTwo.name = "b";
-            mockRepoThree.name = "c";
+            mockRepoOne.name = 'a';
+            mockRepoTwo.name = 'b';
+            mockRepoThree.name = 'c';
 
             const mockRepoData = [ mockRepoOne, mockRepoThree, mockRepoTwo ];
 
