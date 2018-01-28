@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import {Headers, Http, Response, RequestOptionsArgs,} from "@angular/http";
-import { Observable } from "rxjs";
+import { Headers, Http, Response, RequestOptionsArgs } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class GithubColumnService {
     private headers: Headers = new Headers();
     private requestOptions: RequestOptionsArgs = {};
-    private apiServer: string = "https://api.github.com";
+    private apiServer = 'https://api.github.com';
 
     constructor(private http: Http) {
-        this.headers.set("Content-Type", "application/json");
+        this.headers.set('Content-Type', 'application/json');
         this.requestOptions.headers = this.headers;
     }
 
