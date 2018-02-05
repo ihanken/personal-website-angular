@@ -8,12 +8,18 @@
 
 <body>
     <div class="content-view">
+        <div class="background-image"></div>
         <div class="title">
-            <h1>Ian Hanken</h1>
+            <h1>Hi, I'm Ian Hanken</h1>
+        </div>
+        <div class="detail-static">
+            <h3>I make</h3>
+        </div>
+        <div class="detail-dynamic" [@currentTechnologyState]="currentTechnology">
+            <h3> {{ currentTechnology }}.</h3>
         </div>
     </div>
     <app-navbar></app-navbar>
-    <app-github-column></app-github-column>
 </body>
 
 </html>
