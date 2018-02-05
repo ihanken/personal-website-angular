@@ -3,23 +3,20 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { GithubCardComponent } from './github-card.component';
 
 describe('GithubCardComponent', () => {
-  let component: GithubCardComponent;
-  let fixture: ComponentFixture<GithubCardComponent>;
+    let component: GithubCardComponent;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ GithubCardComponent ]
-    })
-    .compileComponents();
-  }));
+    beforeEach(() => {
+        component = new GithubCardComponent();
+    });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(GithubCardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    describe('ngOnInit()', () => {
+        it('should do nothing', () => {
+            component.ngOnInit();
+            expect(true).toBeTruthy();
+        });
+    });
 });

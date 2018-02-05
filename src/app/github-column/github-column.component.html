@@ -1,0 +1,34 @@
+<div class="github-column text-center">
+    <div class="list-repos">
+        <ul class="list-repos-item list-item-container col-sm-12" *ngFor="let repo of repos; let i = index">
+            <div class="card text-center">
+                <div class="thumbnail">
+                    <div class="card-image">
+                        <div class="card-image-cell" [style.backgroundImage]="_DomSanitizationService.bypassSecurityTrustStyle(repo.geopattern_url)">
+                            <h3 class="card-title">
+                                <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="caption">
+                        <div class="card-description">
+                            <p class="card-text">{{ repo.description }}</p>
+                        </div>
+                        <div class="card-text">
+                            <span data-toggle="tooltip" class="meta-info" title="{{ repo.stargazers_count }} stars">
+                                <img src="assets/images/octicon-star.png" width=15 height=15 alt="octicon-star"> {{ repo.stargazers_count }}
+                            </span>
+                            <span data-toggle="tooltip" class="meta-info" title="{{ repo.forks_count }} forks">
+                                <img src="assets/images/octicon-git-branch.svg" width=15 height=15 alt="octicon-git-branch"> {{ repo.forks }}
+                            </span>
+                            <span data-toggle="tooltip" class="meta-info" title="Last updated：{{ repo.updated_at }}">
+                                <span class="octicon octicon-clock"></span>
+                                <!-- <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at }}">{{ repo.updated_at | date: '%Y-%m-%d' }}</time> -->
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
