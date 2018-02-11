@@ -2,7 +2,7 @@ sudo: required
 
 language: node_js
 node_js:
-  - '9.3'
+  - 9.3
 
 # Branch Whitelist
 branches:
@@ -32,7 +32,7 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
 
   # Name of the S3 bucket to which your site should be uploaded.
-  bucket: ians-personal-website
+  bucket: ianhanken.com
 
   # Prevent Travis from deleting your built site so it can be uploaded.
   skip_cleanup: true

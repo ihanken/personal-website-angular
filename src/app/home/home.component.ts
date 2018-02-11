@@ -12,9 +12,12 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     styleUrls: ['./home.component.css'],
     animations: [
         trigger('currentTechnologyState', [
-          transition('* => *', [style({opacity: 0}), animate('500ms ease-in', style({opacity: 1}))])
+            transition('* => *', [
+                style({ opacity: 0 }),
+                animate('500ms ease-in', style({ opacity: 1 }))
+            ])
         ])
-      ]
+    ]
 })
 export class HomeComponent implements OnInit {
     currentTechnology: string;
