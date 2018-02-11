@@ -25,20 +25,38 @@ deploy:
     branch: master
 
   # Ensure that Travis know to deploy to S3.
-  provider: s3
+  - provider: s3
 
-  # You can refer to environment variables from Travis repo settings!
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
+    # You can refer to environment variables from Travis repo settings!
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
 
-  # Name of the S3 bucket to which your site should be uploaded.
-  bucket: ians-personal-website
+    # Name of the S3 bucket to which your site should be uploaded.
+    bucket: www.ianhanken.com
 
-  # Prevent Travis from deleting your built site so it can be uploaded.
-  skip_cleanup: true
+    # Prevent Travis from deleting your built site so it can be uploaded.
+    skip_cleanup: true
 
-  # Path to a directory containing your built site.
-  local_dir: dist
+    # Path to a directory containing your built site.
+    local_dir: dist
 
-  # Set the Cache-Control header.
-  cache_control: "max-age=21600"
+    # Set the Cache-Control header.
+    cache_control: "max-age=21600"
+
+  - provider: s3
+
+    # You can refer to environment variables from Travis repo settings!
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+
+    # Name of the S3 bucket to which your site should be uploaded.
+    bucket: ianhanken.com
+
+    # Prevent Travis from deleting your built site so it can be uploaded.
+    skip_cleanup: true
+
+    # Path to a directory containing your built site.
+    local_dir: dist
+
+    # Set the Cache-Control header.
+    cache_control: "max-age=21600"
