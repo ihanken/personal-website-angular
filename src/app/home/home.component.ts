@@ -19,7 +19,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         ])
     ]
 })
-export class HomeComponent{
+export class HomeComponent {
     currentIndex = 0;
     technologies = [
         'iOS applications',
