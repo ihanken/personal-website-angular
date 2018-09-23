@@ -1,0 +1,35 @@
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    background-color: #3f3f3f
+}
+
+li {
+    padding: 10px 10px 10px 10px;
+}
+
+a {
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+
+    &:link {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    &:visited {
+        color:#FFFFFF;
+        text-decoration: none;
+    }
+
+    &:link:active  {
+        color: #ffffff
+    }
+
+    &:visited:active {
+        color: #FFFFFF
+    }
+}

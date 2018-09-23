@@ -20,20 +20,20 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AppNavbarComponent,
-    GithubCardComponent,
-    HomeComponent,
-    GithubColumnComponent
-  ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    HttpModule,
-    RouterModule.forRoot(routes)
-  ],
-  providers: [GithubColumnService, GithubUserService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        AppNavbarComponent,
+        GithubCardComponent,
+        HomeComponent,
+        GithubColumnComponent
+    ],
+    imports: [
+        BrowserAnimationsModule,
+        BrowserModule,
+        HttpModule,
+        RouterModule.forRoot(routes)
+    ],
+    providers: [GithubColumnService, GithubUserService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

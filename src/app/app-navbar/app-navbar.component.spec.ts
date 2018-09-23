@@ -1,21 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { AppNavbarComponent } from './app-navbar.component';
+import { AppNavbarComponent } from "./app-navbar.component";
 
 describe('AppNavbarComponent', () => {
     let component: AppNavbarComponent;
+    let routerMock = {
+        navigateByUrl: jest.fn()
+    };
 
     beforeEach(() => {
-        component = new AppNavbarComponent();
+        component = new AppNavbarComponent(routerMock as any);
     });
 
     it('should create', () => {
         expect(component).toBeTruthy();
     });
 
-    describe('ngOnInit()', () => {
-        it('should do nothing', () => {
-            component.ngOnInit();
-            expect(true).toBeTruthy();
+    describe('navigateToHome()', () => {
+        it('should navigate to the base url via the router', () => {
+            let navigationSpy = jest.spyOn(routerMock, 'navigateByUrl');
+
+            component.navigateToHome();
+            expect(navigationSpy).toHaveBeenCalled();
         });
     });
 });

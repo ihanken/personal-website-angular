@@ -9,18 +9,17 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css'],
+    styleUrls: ['./home.component.scss'],
     animations: [
         trigger('currentTechnologyState', [
             transition('* => *', [
                 style({ opacity: 0 }),
-                animate('500ms ease-in', style({ opacity: 1 }))
+                animate('750ms ease-in', style({ opacity: 1 }))
             ])
         ])
     ]
 })
-export class HomeComponent implements OnInit {
-    currentTechnology: string;
+export class HomeComponent{
     currentIndex = 0;
     technologies = [
         'iOS applications',
@@ -31,11 +30,9 @@ export class HomeComponent implements OnInit {
         'Swift libraries'
     ];
 
-    constructor() {
-    }
+    currentTechnology = this.technologies[this.currentIndex];
 
-    ngOnInit() {
-        this.currentTechnology = this.technologies[this.currentIndex];
+    constructor() {
         setInterval(() => this.changeTechnology(), 2000);
     }
 

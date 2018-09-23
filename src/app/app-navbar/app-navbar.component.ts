@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
     templateUrl: 'app-navbar.component.html',
-    styles: []
+    styleUrls: ['./app-navbar.component.scss']
 })
-export class AppNavbarComponent implements OnInit {
-    constructor() { }
+export class AppNavbarComponent {
+    constructor(private readonly router: Router) {}
 
-    ngOnInit() {
+    navigateToHome() {
+        this.router.navigateByUrl('');
     }
 }
