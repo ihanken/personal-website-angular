@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -20,20 +21,20 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AppNavbarComponent,
-    GithubCardComponent,
-    HomeComponent,
-    GithubColumnComponent
-  ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    HttpModule,
-    RouterModule.forRoot(routes)
-  ],
-  providers: [GithubColumnService, GithubUserService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        AppNavbarComponent,
+        GithubCardComponent,
+        HomeComponent,
+        GithubColumnComponent
+    ],
+    imports: [
+        BrowserAnimationsModule,
+        BrowserModule,
+        HttpModule,
+        RouterModule.forRoot(routes)
+    ],
+    providers: [GithubColumnService, GithubUserService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

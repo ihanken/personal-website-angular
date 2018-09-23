@@ -9,24 +9,22 @@ describe('HomeComponent', () => {
         component = new HomeComponent();
     });
 
-    it('should create', () => {
+    it('should create', (done) => {
         expect(component).toBeTruthy();
-    });
 
-    describe('ngOnInit()', () => {
-        it('should set current technology to the first technology in technologies', () => {
-            component.ngOnInit();
-            expect(component.currentTechnology).toEqual(component.technologies[0]);
-        });
+        setInterval(() => done(), 2000);
     });
 
     describe('changeTechnology()', () => {
         it('should change current technology to the next technology', () => {
-            component.ngOnInit();
             expect(component.currentTechnology).toEqual(component.technologies[0]);
 
             component.changeTechnology();
             expect(component.currentTechnology).toEqual(component.technologies[1]);
+
+            component.currentIndex = 10000;
+            component.changeTechnology();
+            expect(component.currentTechnology).toEqual(component.technologies[0]);
         });
     });
 });
