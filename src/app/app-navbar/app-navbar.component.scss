@@ -7,13 +7,23 @@ ul {
 }
 
 li {
+    position: relative;
     padding: 10px 10px 10px 10px;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
 }
 
 a {
     cursor: pointer;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
+    height: 37px;
+  line-height: 37px;
+  white-space: nowrap;
 
     &:link {
         color: #FFFFFF;
